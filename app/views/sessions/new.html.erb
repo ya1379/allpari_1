@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<div class="container" id="signup">
+    
+        <div class="header">
+            <h3>Sign In</h3>
+              <p>Fill out this form</p>
+        </div>
+        <div class="sep"></div>
+        <div class="inputs">
+             
+            <%= form_for(:session, url: sessions_path) do |f| %>
+
+              <%= f.label :username %>
+              <%= f.text_field :username, placeholder: "Username", type: "text", autofocus: true  %>
+
+              <%= f.label :password %>
+              <%= f.password_field :password, placeholder: "Passsword" %>
+
+              <%= f.submit "Sign in", id: "submit" %>
+            <% end %>
+            <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+        </div>
+   
+</div>
+
+</html>
